@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<html lang="pt-br" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+{% load static %}
+<meta charset="UTF-8">
+<div>{% include "header.html" %}</div>
+
+<body>
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row align-items-high">
+                <div class="col-lg-6 pb-4">
+                    <div class="bg-primary text-dark text-center p-3">
+                        <h1 class="m-0">Formulário de filiação</h1>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <form class="form" action="." method="POST">
+                        {% csrf_token %}
+                        <h2 class="py-3 bg-secondary text-center">Dados Pessoais</h2>
+                        {{ formFiliacao.nome|as_crispy_field }}
+                        <div class="row">
+                            <div class="col">
+                                {{ formFiliacao.email_principal|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                {{ formFiliacao.tel_res|as_crispy_field }}
+                            </div>
+                            <div class="col">
+                                {{ formFiliacao.tel_cel|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                {{ formFiliacao.rg|as_crispy_field }}
+                            </div>
+                            <div class="col-3">
+                                {{ formFiliacao.orgao_exp|as_crispy_field }}
+                            </div>
+                            <div class="col">
+                                {{ formFiliacao.cpf|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                            {{ formFiliacao.nasc|as_crispy_field }}
+                            </div>
+                            <div class="col">
+                            {{ formFiliacao.cep|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-7">
+                            {{ formFiliacao.endereco|as_crispy_field }}
+                            </div>
+                            <div class="col">
+                            {{ formFiliacao.numero|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-7">
+                            {{ formFiliacao.bairro|as_crispy_field }}
+                            </div>
+                            <div class="col">
+                            {{ formFiliacao.complemento|as_crispy_field }}
+                            </div>
+                        </div>
+                        <h2 class="py-3 bg-secondary text-center">Dados HCPA</h2>
+                            <div class="row">
+                                <div class="col">
+                                {{ formFiliacao.email_hcpa|as_crispy_field }}
+                            </div>
+
+                            <div class="col">
+                                {{ formFiliacao.cargo|as_crispy_field }}
+                            </div>
+                            </div>
+                        <div class="row">
+                            <div class="col">
+                                {{ formFiliacao.setor|as_crispy_field }}
+                            </div>
+                            <div class="col">
+                                {{ formFiliacao.admissao|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                {{ formFiliacao.turno|as_crispy_field }}
+                            </div>
+                            <div class="col">
+                                {{ formFiliacao.ramal|as_crispy_field }}
+                            </div>
+                            <div class="col">
+                                {{ formFiliacao.salario_nominal|as_crispy_field }}
+                            </div>
+                        </div>
+                        <h2 class="py-3 bg-secondary text-center"> Dependentes</h2>
+                        <h5>Dependente 1:</h5>
+                        <div class="row">
+                            <div class="col-5">
+                            {{ formFiliacao.parentesco_1|as_crispy_field }}
+                        </div>
+                        <div class="col">
+                                {{ formFiliacao.qual|as_crispy_field }}
+                        </div>
+                        </div>
+                        <div class="row">
+                                <div class="col">
+                                {{ formFiliacao.nome_1|as_crispy_field }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5">
+                                {{ formFiliacao.nasc_1|as_crispy_field }}
+                                </div>
+                                <div class="col">
+                                {{ formFiliacao.tel_1|as_crispy_field }}
+                                </div>
+                            </div>
+                        <h5>Dependente 2:</h5>
+                        <div class="row">
+                            <div class="col-5">
+                            {{ formFiliacao.parentesco_2|as_crispy_field }}
+                        </div>
+                        <div class="col">
+                                {{ formFiliacao.qual_2|as_crispy_field }}
+                        </div>
+                        </div>
+                        <div class="row">
+                                <div class="col">
+                                {{ formFiliacao.nome_2|as_crispy_field }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5">
+                                {{ formFiliacao.nasc_2|as_crispy_field }}
+                                </div>
+                                <div class="col">
+                                {{ formFiliacao.tel_2|as_crispy_field }}
+                                </div>
+                            </div>
+                        <h5>Dependente 3:</h5>
+                        <div class="row">
+                            <div class="col-5">
+                            {{ formFiliacao.parentesco_3|as_crispy_field }}
+                        </div>
+                        <div class="col">
+                                {{ formFiliacao.qual_3|as_crispy_field }}
+                        </div>
+                        </div>
+                        <div class="row">
+                                <div class="col">
+                                {{ formFiliacao.nome_3|as_crispy_field }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5">
+                                {{ formFiliacao.nasc_3|as_crispy_field }}
+                                </div>
+                                <div class="col">
+                                {{ formFiliacao.tel_3|as_crispy_field }}
+                                </div>
+                            </div>
+                        <h5>Dependente 4:</h5>
+                        <div class="row">
+                            <div class="col-5">
+                            {{ formFiliacao.parentesco_4|as_crispy_field }}
+                        </div>
+                        <div class="col">
+                                {{ formFiliacao.qual_4|as_crispy_field }}
+                        </div>
+                        </div>
+                        <div class="row">
+                                <div class="col">
+                                {{ formFiliacao.nome_4|as_crispy_field }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5">
+                                {{ formFiliacao.nasc_4|as_crispy_field }}
+                                </div>
+                                <div class="col">
+                                {{ formFiliacao.tel_4|as_crispy_field }}
+                                </div>
+                            </div>
+                        <h5>Dependente 5:</h5>
+                        <div class="row">
+                            <div class="col-5">
+                            {{ formFiliacao.parentesco_5|as_crispy_field }}
+                        </div>
+                        <div class="col">
+                                {{ formFiliacao.qual_5|as_crispy_field }}
+                        </div>
+                        </div>
+                        <div class="row">
+                                <div class="col">
+                                {{ formFiliacao.nome_5|as_crispy_field }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5">
+                                {{ formFiliacao.nasc_5|as_crispy_field }}
+                                </div>
+                                <div class="col">
+                                {{ formFiliacao.tel_5|as_crispy_field }}
+                                </div>
+                            </div>
+                        <h6 class="py-3">Confirmar solicitação de filiação?</h6>
+                            <input type="submit" value="Confirmar">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/jquery.mask.min.js' %}"></script>
+    <script src="{% static 'js/cep.js' %}"></script>
+    <script> $.mask.definitions['~'] = '[0-9 ]'; </script>
+
+    <div>{% include "footer.html" %}</div>
+
+</body>
+</html>

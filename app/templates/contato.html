@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<div>{% include "header.html" %}</div>
+   <!-- Contact Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 pb-4 pb-lg-0">
+                    <div class="bg-primary text-dark text-center p-4">
+                        <h4 class="m-0"><i class="fa fa-map-marker-alt text-white mr-2"></i>----</h4>
+                    </div>
+                    <iframe style="width: 100%; height: 470px;"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.936167500385!2d-51.206424999999996!3d-30.0386891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519784e9e9137a5%3A0xf5759e653407f903!2sR.%20Ramiro%20Barcelos%2C%202350%20-%20Santa%20Cec%C3%ADlia%2C%20Porto%20Alegre%20-%20RS%2C%2090035-003!5e0!3m2!1spt-BR!2sbr!4v1663570482252!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-lg-7">
+                    <h6 class="text-primary text-uppercase font-weight-bold">entre em contato</h6>
+                    <h1 class="mb-4">Tire suas Dúvidas</h1>
+
+                    <div class="contact-form bg-secondary" style="padding: 30px;">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="control-group">
+                                <input type="text" class="form-control border-0 p-4" id="name" placeholder="Seu Nome"
+                                    required="required" data-validation-required-message="Por favor, digite seu nome" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="email" class="form-control border-0 p-4" id="email" placeholder="Seu Email"
+                                    required="required" data-validation-required-message="Por favor, digite seu email />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control border-0 p-4" id="subject" placeholder="Assunto"
+                                    required="required" data-validation-required-message="Por favor, digite o assunto" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control border-0 py-3 px-4" rows="3" id="message" placeholder="Mensagem"
+                                    required="required"
+                                    data-validation-required-message="Por favor, digite sua mensagem"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary py-3 px-4" type="submit" id="botaoEnviar">Enviar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Contact End -->
+</body>
+<div>{% include "footer.html" %}</div>
+</html>
