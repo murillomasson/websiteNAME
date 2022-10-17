@@ -1,6 +1,6 @@
 # websitePROJECT
 Django Web App. 
-This repository may not run, because these files are intended only to elucidate the current development of the project.
+This repository may not run. These files are intended only to elucidate the current development of the project.
 Data that may be sensitive has been removed or remains anonymous.
 The project is based on django's MTV architecture, which consists of models, templates, and views.
 
